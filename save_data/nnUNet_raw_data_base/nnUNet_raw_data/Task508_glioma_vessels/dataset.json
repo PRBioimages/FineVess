@@ -1,0 +1,76 @@
+{
+    "description": " glioma vessels segmentation with 3 label",
+    "labels": {
+        "0": "background",
+        "1": "vessels"
+    },
+    "licence": "see reference",
+    "modality": {
+        "0": "CD31"
+    },
+    "name": "glioma_vessels(14)",
+    "numTest": 0,
+    "numTraining": 14,
+    "reference": "none",
+    "release": "0.0",
+    "tensorImageSize": "4D",
+    "test": [],
+    "training": [
+        {
+            "image": "./imagesTr/vessel_024.nii.gz",
+            "label": "./labelsTr/vessel_024.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_025.nii.gz",
+            "label": "./labelsTr/vessel_025.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_026.nii.gz",
+            "label": "./labelsTr/vessel_026.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_027.nii.gz",
+            "label": "./labelsTr/vessel_027.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_028.nii.gz",
+            "label": "./labelsTr/vessel_028.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_029.nii.gz",
+            "label": "./labelsTr/vessel_029.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_030.nii.gz",
+            "label": "./labelsTr/vessel_030.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_031.nii.gz",
+            "label": "./labelsTr/vessel_031.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_032.nii.gz",
+            "label": "./labelsTr/vessel_032.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_033.nii.gz",
+            "label": "./labelsTr/vessel_033.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_034.nii.gz",
+            "label": "./labelsTr/vessel_034.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_035.nii.gz",
+            "label": "./labelsTr/vessel_035.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_036.nii.gz",
+            "label": "./labelsTr/vessel_036.nii.gz"
+        },
+        {
+            "image": "./imagesTr/vessel_037.nii.gz",
+            "label": "./labelsTr/vessel_037.nii.gz"
+        }
+    ]
+}
