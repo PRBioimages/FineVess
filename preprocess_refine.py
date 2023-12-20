@@ -20,10 +20,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Preprocessing-based segmentation refinement')
-    parser.add_argument('--filenames1', dest='filenames1', type=str,
-                        default='/public/yangxiaodu/vessap2/data_self/raw_seg_vessels_result.txt')
-    parser.add_argument('--filenames2', dest='filenames2', type=str,
-                        default='/public/yangxiaodu/vessap2/data_self/preprocessed_seg_vessels_result.txt')
+    # parser.add_argument('--filenames1', dest='filenames1', type=str,
+    #                     default='/public/yangxiaodu/vessap2/data_self/raw_seg_vessels_result.txt')
+    # parser.add_argument('--filenames2', dest='filenames2', type=str,
+    #                     default='/public/yangxiaodu/vessap2/data_self/preprocessed_seg_vessels_result.txt')
     parser.add_argument('--maskFilename', dest='maskFn', type=str,
                         default=None,
                         help='a mask file to be applied to the predictions')
@@ -48,8 +48,8 @@ def run():
     outputFn = args.output
     txt=args.txt
     fmt = args.format
-    filenames1 = args.filenames1
-    filenames2 = args.filenames2
+    # filenames1 = args.filenames1
+    # filenames2 = args.filenames2
     masks = args.maskFn
 
 
@@ -58,8 +58,8 @@ def run():
     print(' Postprocessing Parameters ')
     print('----------------------------------------')
     print('txt',txt)
-    print('Input files:', filenames1)
-    print('Input files:', filenames2)
+    # print('Input files:', filenames1)
+    # print('Input files:', filenames2)
     print('Mask file:', masks)
     print('Output folder:', outputFn)
 
