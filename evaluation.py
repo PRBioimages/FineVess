@@ -155,6 +155,19 @@ def run():
         print(index)
         data1 = data[index, :, :]
         mask1 = mask[index, :, :]
+        asd=0
+        num=0
+        mask1_b = mask1.astype(bool)
+        data1_b = data1.astype(bool)
+        for o in range(mask1.shape[0]):
+            if np.sum(data1_b[o])!=0:
+                surface_distances = surfdist.compute_surface_distances(
+                    mask1_b[o], data1_b[o], spacing_mm=(1.0, 1.0))
+                avg_surf_dist = surfdist.compute_average_surface_distance(surface_distances)
+                assd=(avg_surf_dist[0]+avg_surf_dist[1])/2
+                asd=asd+assd
+                num=num+1
+        asd1[i]=round(asd/num,4)
         dice1[i] = round(metric_dice(mask1, data1), 4)
         f1score1[i] = round(dice_score(mask1, data1), 4)
         f1score2[i]= round(f1_socre(mask1, data1), 4)
