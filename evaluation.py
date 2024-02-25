@@ -5,6 +5,7 @@ import numpy as np
 from dvn.metrics import dice_score
 from keras import backend as K
 import tensorflow as tf
+import surface_distance as surfdist
 
 def NumIn(s):
     for char in s:
