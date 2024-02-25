@@ -182,19 +182,20 @@ def run():
     Len={}
     Sum={}
     Avg={}
-    for k, p in enumerate([dice1,f1score1,f1score2,acc_voxel1,acc_voxel2,sensitivity2,specificity2,precision2]):
+    for k, p in enumerate([asd1,dice1,f1score1,f1score2,acc_voxel1,acc_voxel2,sensitivity2,specificity2,precision2]):
         Len[k] = len(p)
         Sum[k] = sum(p.values())
         Avg[k] = Sum[k] / Len[k]
     path=args.output+'/metric_other.txt'
     f = open(path,'w')
-    f.writelines([path,"\n","dice1:",str(dice1),str(Avg[0]),
+    f.writelines([path,"\n","asd1:",str(asd1),str(Avg[0]),"\n","dice1:",str(dice1),str(Avg[1]),
                   #"\n", "f1_score1:",str(f1score1),str(Avg[1]),"\n","f1score2:",str(f1score2),str(Avg[2]),
-                  "\n","acc_voxel1:",str(acc_voxel1),str(Avg[3]),#"\n","acc_voxel2:",str(acc_voxel2),str(Avg[4]),
-                  "\n","sensitivity2:",str(sensitivity2),str(Avg[5]),"\n","specificity2:",str(specificity2),str(Avg[6]),
-                  "\n","precision2:",str(precision2),str(Avg[7]),"\n","name:",str(name)])
+                  "\n","acc_voxel1:",str(acc_voxel1),str(Avg[4]),#"\n","acc_voxel2:",str(acc_voxel2),str(Avg[4]),
+                  "\n","sensitivity2:",str(sensitivity2),str(Avg[6]),"\n","specificity2:",str(specificity2),str(Avg[6]),
+                  "\n","precision2:",str(precision2),str(Avg[8]),"\n","name:",str(name)])
     f.close()
     # print("dice_probs", dice_acc)
+    print('ASD',asd1)
     print("dice1", dice1)
     print("f1_score1", f1score1)
     print("f1_score2", f1score2)
